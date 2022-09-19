@@ -19,9 +19,9 @@ class Home extends CI_Controller
     //Problem number 1
     public function MarioFlagPole($argu)
     {
-        echo '<body style="    display: flex; justify-content: center;align-items: center;height: 100vh;background-color: rgb(110, 110, 110);;text-align: center;">';
-        echo '<div class="my_class" style="text-align: right;">'; // moving to the right to match the given output 
-        echo "<pre> Argument is equal to: " . $argu . " </pre>"; //printing the argument in the URI
+        echo '<div style="text-align: right; padding: 25vh 80vh;">'; // moving to the right to match the given output 
+        echo "<h2>Mario Flag Pole</h2>";
+        echo "<pre> Arg is equal to: " . $argu . " </pre>"; //printing the argument in the URI
 
         $count = 1; // initialize to start in 1
         for ($i = 1; $i <= $argu; $i++) { // the number of lines will depend on the input value of argument
@@ -37,12 +37,18 @@ class Home extends CI_Controller
     //Problem number 2
     public function BoxedFrame($argu1, $argu2)
     {
+        echo "<h2>Boxed Frame</h2>";
+        echo "<pre> Arg1 is equals to:" . $argu1 . "</pre>"; //printing the argument in the URI
+        echo "<pre> Arg2 is equals to:" . $argu2 . " </pre>"; //printing the argument inthe URI
+
     }
 
 
     //Problem number 3
     public function HoneyComb($argu1, $argu2)
     {
+
+        echo "<h2>Honey Comb</h2>";
         echo "<pre> Arg1 is equals to:" . $argu1 . "</pre>"; //printing the argument in the URI
         echo "<pre> Arg2 is equals to:" . $argu2 . " </pre>"; //printing the argument inthe URI
 
