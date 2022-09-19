@@ -17,7 +17,7 @@
         <ul id="navlist">
             <li><a href="<?= base_url('Home/MarioFlagPole/5') ?>">Mario Tower</a></li>
             <li><a href="<?= base_url('Home/BoxedFrame/5/5') ?>">Boxed Frame</a></li>
-            <li><a href="<?= base_url('Home/HoneyComb/5/5') ?>">Honey Comb</a></li>
+            <li><a href="<?= base_url('Home/HoneyComb/2/2') ?>">Honey Comb</a></li>
         </ul>
     </div>
 </body>

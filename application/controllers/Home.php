@@ -19,7 +19,7 @@ class Home extends CI_Controller
     //Problem number 1
     public function MarioFlagPole($argu)
     {
-        echo '<div style="text-align: right; padding: 25vh 80vh;">'; // moving to the right to match the given output 
+        echo '<div style="text-align: right; ">'; // moving to the right to match the given output 
         echo "<h2>Mario Flag Pole</h2>";
         echo "<pre> Arg is equal to: " . $argu . " </pre>"; //printing the argument in the URI
 
@@ -41,6 +41,18 @@ class Home extends CI_Controller
         echo "<pre> Arg1 is equals to:" . $argu1 . "</pre>"; //printing the argument in the URI
         echo "<pre> Arg2 is equals to:" . $argu2 . " </pre>"; //printing the argument inthe URI
 
+        for ($i = 0; $i < $argu1; $i++) {
+            for ($j = 0; $j < $argu2; $j++) {
+                if ($i == 0 || $j == 0 || $i == $argu1 - 1 || $j == $argu2 - 1) {
+                    echo "*";
+                } elseif ($i == 1 || $j == 1 || $i == $argu1 - 2 || $j == $argu2 - 2) {
+                    echo "&nbsp&nbsp";
+                } else {
+                    echo "*";
+                }
+            }
+            echo "</br>";
+        }
     }
 
 
