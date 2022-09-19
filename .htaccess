@@ -2,3 +2,6 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php/$0 [PT,L]
+
+#Code by Justine Rome M. Guillermo
+#code from: https://github.com/romeJG/TSA-1
