@@ -1,7 +1,8 @@
 ###################
 What is This?
 ###################
-This is a TSA for my school FEU Institute of Technology. This contains the answer to our Technical Summative Assesment 1. framework used is code igniter. Here are the questions;
+This is a TSA for my course IT0049 (Web System and Technologies
+) in my school FEU Institute of Technology. This contains the answer to our Technical Summative Assesment 1. framework used is code igniter. Here are the questions;
 
 1.) MarioFlagPole
 - Accepts 1 argument, which is the Flag Pole Size.
