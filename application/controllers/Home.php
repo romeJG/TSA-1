@@ -22,14 +22,17 @@ class Home extends CI_Controller
         echo '<div style="text-align: right; ">'; // moving to the right to match the given output 
         echo "<h2>Mario Flag Pole</h2>";
         echo "<pre> Arg is equal to: " . $argu . " </pre>"; //printing the argument in the URI
-
-        $count = 1; // initialize to start in 1
-        for ($i = 1; $i <= $argu; $i++) { // the number of lines will depend on the input value of argument
-            for ($x = 0; $x <= $i; $x++) {
-                echo $count . " ";
-                $count++;
+        if (is_numeric($argu)) {
+            $count = 1; // initialize to start in 1
+            for ($i = 1; $i <= $argu; $i++) { // the number of lines will depend on the input value of argument
+                for ($x = 0; $x <= $i; $x++) {
+                    echo $count . " ";
+                    $count++;
+                }
+                echo '<br/>';
             }
-            echo '<br/>';
+        } else {
+            echo "err: Numbers only pls";
         }
         echo '</div>';
     }
@@ -41,17 +44,21 @@ class Home extends CI_Controller
         echo "<pre> Arg1 is equals to:" . $argu1 . "</pre>"; //printing the argument in the URI
         echo "<pre> Arg2 is equals to:" . $argu2 . " </pre>"; //printing the argument inthe URI
 
-        for ($i = 0; $i < $argu1; $i++) {
-            for ($j = 0; $j < $argu2; $j++) {
-                if ($i == 0 || $j == 0 || $i == $argu1 - 1 || $j == $argu2 - 1) {
-                    echo "*";
-                } elseif ($i == 1 || $j == 1 || $i == $argu1 - 2 || $j == $argu2 - 2) {
-                    echo "&nbsp&nbsp";
-                } else {
-                    echo "*";
+        if (is_numeric($argu1) && is_numeric($argu2)) {
+            for ($i = 0; $i < $argu1; $i++) {
+                for ($j = 0; $j < $argu2; $j++) {
+                    if ($i == 0 || $j == 0 || $i == $argu1 - 1 || $j == $argu2 - 1) {
+                        echo "*";
+                    } elseif ($i == 1 || $j == 1 || $i == $argu1 - 2 || $j == $argu2 - 2) {
+                        echo "&nbsp&nbsp";
+                    } else {
+                        echo "*";
+                    }
                 }
+                echo "</br>";
             }
-            echo "</br>";
+        } else {
+            echo "err: Numbers only pls";
         }
     }
 
@@ -64,32 +71,35 @@ class Home extends CI_Controller
         echo "<pre> Arg1 is equals to:" . $argu1 . "</pre>"; //printing the argument in the URI
         echo "<pre> Arg2 is equals to:" . $argu2 . " </pre>"; //printing the argument inthe URI
 
-
-        for ($a = 1; $a < 7 * $argu1; $a++) {
-            for ($b = 1; $b < 7 * $argu2; $b++) {
-                if ($a == 1 || $a == 6 || $a == 11) {
-                    if ($b != 3 && $b != 4 && $b != 8 && $b != 9) {
-                        echo "&nbsp";
-                    } else {
-                        echo "*";
+        if (is_numeric($argu1) && is_numeric($argu2)) {
+            for ($a = 1; $a < 7 * $argu1; $a++) {
+                for ($b = 1; $b < 7 * $argu2; $b++) {
+                    if ($a == 1 || $a == 6 || $a == 11) {
+                        if ($b != 3 && $b != 4 && $b != 8 && $b != 9) {
+                            echo "&nbsp";
+                        } else {
+                            echo "*";
+                        }
+                    }
+                    if ($a == 2 || $a == 5 || $a == 7 || $a == 10) {
+                        if ($b != 2 && $b != 5 && $b !== 7 && $b != 10) {
+                            echo "&nbsp";
+                        } else {
+                            echo "*";
+                        }
+                    }
+                    if ($a == 3 || $a == 4 || $a == 8 || $a == 9) {
+                        if ($b != 1 && $b != 6 && $b != 12) {
+                            echo "&nbsp";
+                        } else {
+                            echo "*";
+                        }
                     }
                 }
-                if ($a == 2 || $a == 5 || $a == 7 || $a == 10) {
-                    if ($b != 2 && $b != 5 && $b !== 7 && $b != 10) {
-                        echo "&nbsp";
-                    } else {
-                        echo "*";
-                    }
-                }
-                if ($a == 3 || $a == 4 || $a == 8 || $a == 9) {
-                    if ($b != 1 && $b != 6 && $b != 12) {
-                        echo "&nbsp";
-                    } else {
-                        echo "*";
-                    }
-                }
+                echo "<br>";
             }
-            echo "<br>";
+        } else {
+            echo "err: Numbers only pls";
         }
     }
 }
